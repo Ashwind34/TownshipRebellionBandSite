@@ -2,7 +2,7 @@ body {
 	background-color:#1c1c1c;
 	background-image:url("../images/bg.png");
 	font-family:arial,tahoma,sans-serif;
-	font-size:12px;
+	font-size:14px;
 	color:#beb9ab;
 	padding:25px 0;
 	margin:0px;
@@ -63,6 +63,7 @@ h3 {
 	background:#000;
 	border-top:solid 1px #333;
 	border-bottom:solid 1px #333;
+	float:bottom;
 }
 
 .photos img {
