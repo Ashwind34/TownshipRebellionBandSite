@@ -1,6 +1,10 @@
 body {
 	background-color:#1c1c1c;
-	background-image:url("../images/bg.png");
+	background-image:url("../images/redstarblack2.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	font-family:arial,tahoma,sans-serif;
 	font-size:14px;
 	color:#beb9ab;
@@ -16,6 +20,15 @@ body {
 
 .logo, .photo {
 	margin-bottom:20px;
+}
+
+.band {
+	display: block;
+    margin-left: auto;
+	margin-right: auto;
+	width: 95%;
+	/* height: 700px; */
+	/* width: 1920px; */
 }
 
 .left {
@@ -45,13 +58,17 @@ a:hover, a:active {
 
 h2 {
 	font-size:48px;
-	color:#a53232;
+	color:#499c2894;
 	text-align:center;
 }
 
 h3 {
 	color:#fff;
-}	
+}
+
+h4 {
+	font-size:32px;
+}
 
 .clear {
 	clear:both;
@@ -63,7 +80,6 @@ h3 {
 	background:#000;
 	border-top:solid 1px #333;
 	border-bottom:solid 1px #333;
-	float:bottom;
 }
 
 .photos img {
