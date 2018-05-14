@@ -30,13 +30,23 @@ body {
 	text-align:left;
 }
 
-a, a:link, a:visited {
-	color:#fff;
+a, a:link {
+	color:#beb9ab;
 	text-decoration:none;
 }
 
+a:visited{
+	color:blue;
+}
+
 a:hover, a:active {
-	color:#dedacd;
+	color:#e22f2f;
+}
+
+h2 {
+	font-size:48px;
+	color:#a53232;
+	text-align:center;
 }
 
 h3 {
