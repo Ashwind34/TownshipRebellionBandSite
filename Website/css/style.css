@@ -27,8 +27,6 @@ body {
     margin-left: auto;
 	margin-right: auto;
 	width: 95%;
-	/* height: 700px; */
-	/* width: 1920px; */
 }
 
 .left {
@@ -58,7 +56,6 @@ a:hover, a:active {
 
 h2 {
 	font-size:48px;
-	color:#499c2894;
 	text-align:center;
 }
 
