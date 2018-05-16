@@ -30,44 +30,60 @@ if (!empty($_POST['register'])) {
 		
 		if (!empty($_POST['email'])) {
 			
-			//Prepared Statement 
-					
-			$query = "INSERT INTO fantable (FirstName, LastName, email) 
-						VALUES (:fname, :lname, :email)";					
-			
-			$submit = $conn->prepare($query);
-			
-			//bind parameters
-			
-			$submit->BindParam(':fname', $_POST['fname']);
-			$submit->BindParam(':lname', $_POST['lname']);
-			$submit->BindParam(':email', $_POST['email']);
+			// check to make sure email is not already on list
 
-			//USE THIS LATER ONCE YOU CAN UNENCRYPT EMAILS WHEN EXPORTING TO SPREADSHEET
-			//$submit->BindParam(':password', password_hash($_POST['email'], PASSWORD_BCRYPT));
+			// $emailquery = $conn->prepare("SELECT * FROM fantable WHERE email = :email");
+			// $emailquery->BindParam(':email', $_POST['email']);
+			// $emailquery->execute();
+			// $count = $emailquery->rowCount();
+			// echo $count;
+
+			// if ($emailquerycount = 0) {
 			
+				//Prepared Statement 
+						
+				$query = "INSERT INTO fantable (FirstName, LastName, email) 
+							VALUES (:fname, :lname, :email)";					
 				
-			//Submit query to database
-
-			if ($submit->execute()) {
-
-				echo '<br><p style="font-size:20px">New Fan Updated Successfully!</p>';
-								
-			} else {
+				$submit = $conn->prepare($query);
 				
-				echo '<br><p style="font-size:20px">Problem with Registration.  Please try again.</p>';
-				echo '<br><p style="font-size:20px;"><a href="emailform.php">Try Again</a></p>';
-								
-			}
+				//bind parameters
+				
+				$submit->BindParam(':fname', $_POST['fname']);
+				$submit->BindParam(':lname', $_POST['lname']);
+				$submit->BindParam(':email', $_POST['email']);
+
+				//USE THIS LATER ONCE YOU CAN UNENCRYPT EMAILS WHEN EXPORTING TO SPREADSHEET
+				//$submit->BindParam(':password', password_hash($_POST['email'], PASSWORD_BCRYPT));
+				
 					
+				//Submit query to database
+
+				if ($submit->execute()) {
+
+					echo '<br><p style="font-size:20px">New Fan Updated Successfully!</p>';
+									
+				} else {
+					
+					echo '<br><p style="font-size:20px">Problem with Registration.  Please try again.</p>';
+					echo '<br><p style="font-size:20px;"><a href="emailform.php">Try Again</a></p>';
+									
+				}
+			
+			// } else {
+
+			// 	echo '<br><p style="font-size:20px">Already on the list!</p>';
+				
+			// }
+			
 		} else {
 					
 			echo '<br><p style="font-size:20px">Please complete all fields.</p>';
 			echo '<br><p style="font-size:20px;"><a href="register.php">Try Again</a></p>';
 								
-				}
+		}
 
-		}		
+	}		
 	
 ?>
 
