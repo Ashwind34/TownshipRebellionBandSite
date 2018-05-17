@@ -30,15 +30,13 @@ if (!empty($_POST['register'])) {
 		
 		if (!empty($_POST['email'])) {
 			
-			// check to make sure email is not already on list
+			//check to make sure email is not already on list
 
-			// $emailquery = $conn->prepare("SELECT * FROM fantable WHERE email = :email");
-			// $emailquery->BindParam(':email', $_POST['email']);
-			// $emailquery->execute();
-			// $count = $emailquery->rowCount();
-			// echo $count;
+			$emailquery = "SELECT * FROM fantable WHERE email={$_POST['email']}";
 
-			// if ($emailquerycount = 0) {
+			$emailquery->exec();
+
+			if (empty($emailquery)) {
 			
 				//Prepared Statement 
 						
@@ -70,20 +68,20 @@ if (!empty($_POST['register'])) {
 									
 				}
 			
-			// } else {
+			} else {
 
-			// 	echo '<br><p style="font-size:20px">Already on the list!</p>';
+				echo '<br><p style="font-size:20px">Already on the list!</p>';
 				
-			// }
+			}
 			
 		} else {
 					
 			echo '<br><p style="font-size:20px">Please complete all fields.</p>';
 			echo '<br><p style="font-size:20px;"><a href="register.php">Try Again</a></p>';
 								
-		}
+				}
 
-	}		
+		}		
 	
 ?>
 
