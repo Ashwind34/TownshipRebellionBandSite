@@ -26,13 +26,6 @@
 	});
 </script>
 
-<!-- 
-TO DO LIST:
-UPDATE PHOTOS AND THUMBNAILS
--->
-
-
-
 </head>
 <body>
 
@@ -44,15 +37,13 @@ UPDATE PHOTOS AND THUMBNAILS
 
 		<img class="band" src="images/trmusicbox.jpg"/>
 
-		<h2><u><b>NEXT SHOW</b></u></h2>
-		<h2 style="font-size:40px">The Black Box</h2>
-		<h2 style="font-size:40px">Tijuana, Mexico</h2>
-		<h2 style="font-size:40px">Saturday, May 19th</h2>
-
-		<img class="photo" src="images/tjposter.jpg"><br>
+		<!-- <h2><u><b>NEXT SHOW</b></u></h2> -->
 		
 		<div class="left">
-		
+			<br>
+			<br>
+			<br>
+			<br>
 			<p style="font-size: 18px">Townshp Rebellion is San Diego's premier Rage Against the Machine tribute band!  
 			The group has been bringing high-powered performances of Rage Against the Machine hits all over 
 			Southern California and Mexico since 2013, making them one of the longest-tenured tribute acts in the area.
