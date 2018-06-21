@@ -139,9 +139,9 @@
 
 			for($count = 1; $count <= 18; $count+=3) {
 		
-			echo '<a class="fancybox" rel="gallery" href="images/gallery/image(' . $count . ').jpg"><img src="images/gallery/thumbs/thumb (' . $count . ').jpg"/></a>';
-			echo '<a class="fancybox" rel="gallery" href="images/gallery/image(' . ($count + 1) . ').jpg"><img src="images/gallery/thumbs/thumb (' . ($count + 1) . ').jpg"/></a>';
-			echo '<a class="fancybox" rel="gallery" href="images/gallery/image(' . ($count + 2) . ').jpg"><img class="last" src="images/gallery/thumbs/thumb (' . ($count + 2) . ').jpg"/></a>';
+			echo '<a class="fancybox" rel="gallery" href="images/gallery/image(' . $count . ').jpg"><img src="images/gallery/thumbs/thumb(' . $count . ').jpg"/></a>';
+			echo '<a class="fancybox" rel="gallery" href="images/gallery/image(' . ($count + 1) . ').jpg"><img src="images/gallery/thumbs/thumb(' . ($count + 1) . ').jpg"/></a>';
+			echo '<a class="fancybox" rel="gallery" href="images/gallery/image(' . ($count + 2) . ').jpg"><img class="last" src="images/gallery/thumbs/thumb(' . ($count + 2) . ').jpg"/></a>';
 			
 			}
 			?>
