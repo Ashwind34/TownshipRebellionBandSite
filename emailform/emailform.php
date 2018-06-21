@@ -100,7 +100,7 @@ if (!empty($_POST['register'])) {
 	
 	<p><input type="submit" name="register" value="Update Mailing List"></p><br>
 	
-	<p><a href="../index.html">Return to Homepage</a></p>
+	<p><a href="../index.php">Return to Homepage</a></p>
 
 </form>
 </body>
