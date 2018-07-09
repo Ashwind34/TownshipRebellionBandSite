@@ -1,1 +1,5 @@
+# all images
 /images
+# db login credentials
+Website/emailform/pdo_connect.php
+
