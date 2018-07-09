@@ -32,11 +32,17 @@ if (!empty($_POST['register'])) {
 			
 			//check to make sure email is not already on list
 
-			$emailquery = "SELECT * FROM fantable WHERE email={$_POST['email']}";
+			$emailquery = $conn->prepare("SELECT * FROM fantable WHERE email= :email");
 
-			$emailquery->exec();
+			$emailquery->BindParam(':email', $_POST['email']);
 
-			if (empty($emailquery)) {
+			$emailquery->execute();
+
+			$emailqtable=$emailquery->fetchall(PDO::FETCH_ASSOC);
+
+			echo $emailqtable;
+
+			if (count($emailqtable) == 0) {
 			
 				//Prepared Statement 
 						
@@ -79,9 +85,9 @@ if (!empty($_POST['register'])) {
 			echo '<br><p style="font-size:20px">Please complete all fields.</p>';
 			echo '<br><p style="font-size:20px;"><a href="register.php">Try Again</a></p>';
 								
-				}
-
-		}		
+		}
+}
+			
 	
 ?>
 
