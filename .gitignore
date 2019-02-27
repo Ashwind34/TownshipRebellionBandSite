@@ -2,6 +2,6 @@
 /images
 /images/gallery
 # db login credentials
-#/Website/emailform/pdo_connect.php
-#/emailform/pdo.connect.php
+/Website/emailform/pdo_connect.php
+/emailform/pdo.connect.php
 
