@@ -2,4 +2,5 @@
 /images
 # db login credentials
 Website/emailform/pdo_connect.php
+emailform/pdo.connect.php
 
